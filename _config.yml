@@ -1,0 +1,24 @@
+# -- Site Settings --
+title: Jekyll Bootstrapped
+baseurl: "/Jekyll-Bootstrapped"
+url: "https://skrillx13.github.io"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+github: Skrillx13/Bootstrapped
+
+# -- Build Settings --
+plugins:
+  - jekyll-feed
+
+# -- Directories --
+include:
+  - _config.yml
+exclude:
+  - mkdoc/
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .jekyll-cache/
+  - node_modules
