@@ -1,0 +1,10 @@
+# -- Site Packages --
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# -- Misc --
+.vscode
+**/.DS_Store
