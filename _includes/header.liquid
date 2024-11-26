@@ -7,14 +7,12 @@
     </a>
 
     <div class="d-flex">
-      <div class="bd-search" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
-
       <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
-        <i class="bi bi-three-dots"></i>
+        {% include icons/three-dots.svg %}
       </button>
     </div>
 
-    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" style="background-color: #7431F9;">
       <div class="offcanvas-header px-4 pb-0">
         <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Jekyll Bootstrapped</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
@@ -27,16 +25,8 @@
             <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="{{ site.baseurl }}/docs/installation" style="color: #fff;">Theme Docs</a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Page.Title "Examples" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/">Kitchen Sink</a>
+            <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Page.Title "Examples" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" style="color: #fff;">Kitchen Sink</a>
           </li>
-          <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.icons }}" target="_blank" rel="noopener">Icons</a>
-          </li>
-          <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.themes }}" target="_blank" rel="noopener">Themes</a>
-          </li>
-          <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.blog }}" target="_blank" rel="noopener">Blog</a>
           </li>
         </ul>
 
@@ -44,30 +34,11 @@
 
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">
-              {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
-              <small class="d-lg-none ms-2">GitHub</small>
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">
+              {% include icons/github.svg %}
+              <small class="d-lg-none ms-2" style="color: #fff;">GitHub</small>
             </a>
           </li>
-          <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank" rel="noopener">
-              {{ partial "icons/twitter.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
-              <small class="d-lg-none ms-2">Twitter</small>
-            </a>
-          </li>
-          <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.opencollective }}" target="_blank" rel="noopener">
-              {{ partial "icons/opencollective.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
-              <small class="d-lg-none ms-2">Open Collective</small>
-            </a>
-          </li>
-          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-            <hr class="d-lg-none my-2 text-white-50">
-          </li>
-
-          {{ partial "docs-versions" . }}
-
           <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
             <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
             <hr class="d-lg-none my-2 text-white-50">

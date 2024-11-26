@@ -9,8 +9,13 @@ plugins:
 
 # -- Excluded Items --
 exclude:
-  - README.md
-  - LICENSE
-  - .gitignore
-  - Gemfile
-  - Gemfile.lock
+  - README.md # Project README, which Shouldn't be included in the site.
+  - LICENSE # Project LICENSE, with the same reasoning as the README
+  - .gitignore # A list of ignored files that shouldn't be pushed to the GitHub Repo
+  - Gemfile # A list of Ruby Packages
+  - Gemfile.lock # More Ruby Packaging
+  - _site # Jekyll Rendered Site
+  - .jekyll-cache # More Jekyll Stuff
+
+# -- Theming --
+github: Skrillx13/Jekyll-Bootstrapped

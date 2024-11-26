@@ -1,3 +1,13 @@
 ---
 ---
+
+// Stylesheet Imports 
+// This Stylesheet is in charge of importing other Stylesheets from across the Project. It's a good way to keep 
+// things organized.
+
+// Main Imports, for site-wide styling
 @import "styles";
+@import "colours";
+
+// Other Imports, maybe for overrides
+@import "overrides";
